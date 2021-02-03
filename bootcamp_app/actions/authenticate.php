@@ -12,5 +12,6 @@ if (isset($_REQUEST['sid']) &&
 
     header("Location: index.php");
 }
-
-file_put_contents('error.log', json_encode($_REQUEST));
+else {
+    header("Location: index.php?page=login");
+}
